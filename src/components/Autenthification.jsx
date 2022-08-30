@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/autenthification.css'
 
 const Autenthification = () => {
   return (
