@@ -1,8 +1,13 @@
 import React from 'react'
-
+import Music from './Music'
+import '../styles/main.css'
 const Main = () => {
   return (
-    <div>Main</div>
+    <section>
+        <div className="song">
+            <Music />
+        </div>
+    </section>
   )
 }
 
