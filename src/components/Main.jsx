@@ -1,11 +1,12 @@
 import React from 'react'
-import Music from './Music'
 import '../styles/main.css'
+import Music from './Music'
 const Main = () => {
   return (
     <section>
         <div className="song">
-            <Music />
+           <h4>Nouvautés</h4> 
+           <Music />
         </div>
     </section>
   )
