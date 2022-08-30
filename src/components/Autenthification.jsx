@@ -3,7 +3,9 @@ import '../styles/autenthification.css'
 
 const Autenthification = () => {
   return (
-    <div>Autenthification</div>
+    <section className='container'>
+        <div>autenthification</div>
+    </section>
   )
 }
 
