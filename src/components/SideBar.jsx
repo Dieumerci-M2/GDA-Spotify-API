@@ -18,9 +18,16 @@ const SideBar = () => {
             <HiHome /><span>Home</span>
         </div>
         <div className="othermenu">
-            <BsFillPlusCircleFill /><span id='playlist'>Créer une Playlist</span>
-            <RiMusic2Fill /><span id='preference'>Musique Favorite</span>
-            <IoIosMicrophone /><span id='InfoArtiste'>Info Artiste</span>
+            <div>
+                <BsFillPlusCircleFill /><span id='playlist'>Créer une Playlist</span>
+            </div>
+            <div>
+                <RiMusic2Fill /><span id='preference'>Musique Favorite</span>
+            </div>
+            <div>
+                <IoIosMicrophone /><span id='InfoArtiste'>Info Artiste</span>
+            </div>
+            
         </div>
         <div className="mentionLeg">
             <span>Mentions Légales</span>
