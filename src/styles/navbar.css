@@ -1,5 +1,26 @@
 .nav{
+    width: max-content;
     background-color: #121212;
     display: flex;
     flex-direction: row;
+    gap: 10rem;
 }
+.profil{
+    width: 30px !important;
+    height: 30px !important;
+    background-color: black !important;
+    border-radius: 50% !important;
+}
+.enter{
+    min-width: 400px !important;
+    margin-left: 100px;
+    margin-right: 200px;
+}
+.autenthification{
+    margin-left: 275px;
+}
+.picture{
+    display: flex !important;
+    gap: 100px !important;
+}
+
