@@ -1,22 +1,11 @@
 section{
-     max-width: 350px; 
-     min-width: 350px; 
+     max-width: 350px !important; 
+     min-width: 350px !important; 
     background-color: #00000E;
 }
-.title{
-    margin-top: 50px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-.title span{
-    font-size: 24px;
-    color: white;
-}
-.logo{
-    align-items: center;
-    text-align: center;
-}
-.logo img{
+
+
+img{
     max-width: 100px;
     max-height: 100px;
 }
@@ -24,9 +13,14 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
+    gap: 50px !important;
 }
-.home{
-    text-align: center;
-    margin: 30px auto;
+.mentionLeg{
+    margin-top: 9rem !important;   
 }
+.icone-home{
+    margin-top: 30px !important;
+    margin-bottom: 50px !important;
+    margin-left: 80px !important;
+}
+

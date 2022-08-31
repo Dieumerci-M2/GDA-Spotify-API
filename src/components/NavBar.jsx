@@ -6,7 +6,7 @@ import '../styles/navbar.css'
 import Autenthification from './Autenthification'
 const NavBar = () => {
   return (
-    <section className='nav'>
+    <section className='nav '>
         <div className='search'>
             <input type="text" /><BsSearch/>
         </div>
