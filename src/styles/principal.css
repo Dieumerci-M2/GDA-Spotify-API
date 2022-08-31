@@ -1,5 +1,6 @@
 
 .containe{
     height: 100vh;
+    width: 100vh;
     display: flex;
 }
