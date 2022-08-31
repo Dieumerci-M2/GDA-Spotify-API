@@ -1,0 +1,35 @@
+.music{
+    border-radius: 10px;
+    background-color: #121212;
+    max-width: 150px !important;
+    max-height: 250px !important;
+}
+img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 150px !important;
+    height: 150px !important;
+
+}
+.contenu{
+    width: 150px !important;
+    height: 250px !important;
+}
+.photo-artiste{
+    width: 150px !important;
+    height: 150px !important;  
+}
+.player{
+    display: flex;
+    color: white;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.title-Music{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

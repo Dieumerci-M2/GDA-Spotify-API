@@ -4,12 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Button from 'react-bootstrap/Button'
 import '../styles/navbar.css'
 import Autenthification from './Autenthification'
-const NavBar = () => {
-  const ClientId = '03880715cb5c42db88b289ec843534bc'
-  const redirection = 'http://localhost:5173/'
-  const outendpoint = 'https://accounts.spotify.com/authorize'
-  const answer = 'token'
-
+const NavBar = ({ClientId, redirection, outendpoint, answer}) => {
+ 
   return (
     <section className='nav '>
         <div className='search ms-4'>
