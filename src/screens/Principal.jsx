@@ -5,7 +5,7 @@ import Main from '../components/Main'
 import '../styles/principal.css'
 const Principal = () => {
   return (
-    <div className='container'>
+    <div className='containe'>
         <SideBar />
         <div className='middle'>
             <NavBar />
