@@ -7,28 +7,25 @@ import {RiMusic2Fill} from 'react-icons/ri'
 import {IoIosMicrophone} from 'react-icons/io'
 const SideBar = () => {
   return (
-    <section className='h-100'>
-        <div className="mt-5 mb-2 text-center">
+    <section className='side-containe h-100'>
+        <div className="mt-3 mb-2 text-center">
             <span className='fs-2 text-light fw-bold'>GDA Music</span>
         </div>
         <div className="text-center mb-4">
             <img src={logo} alt="voici notre logo" />
         </div>
-        <div className="icone-home my-8 text-light">
-            <div className='fs-4 fw-4'>
-                <HiHome /><span className='ms-4 text-light fw-semibold'>Home</span>
-            </div>
-            
+        <div className="icone-home text-light fw-semibold">
+                <span className='fs-3'><HiHome /></span><span className='ms-3 text-light'>Home</span>
         </div>
-        <div className="othermenu ms-5 text-light mt-8 fs-4 fw-4">
+        <div className="othermenu ms-3 text-light">
             <div>
-                <BsFillPlusCircleFill /><span id='playlist' className='ms-3 mt-8 fs-4 fw-semibold'>Créer une Playlist</span>
+            <span className='fs-3'><BsFillPlusCircleFill /></span><span id='playlist' className="ms-4 pe-auto">Créer une Playlist</span>
             </div>
             <div>
-                <RiMusic2Fill /><span id='preference'className='ms-3 mt-8 fs-4 fw-semibold'>Musique Favorite</span>
+                <span className='fs-3'><RiMusic2Fill /></span><span id='preference'className='ms-4'>Musique Favorite</span>
             </div>
             <div>
-                <IoIosMicrophone /><span id='InfoArtiste' className='ms-3 mt-8 fs-4 fw-semibold'>Info Artiste</span>
+                <span className='fs-3'><IoIosMicrophone /></span><span id='InfoArtiste' className='ms-4'>Info Artiste</span>
             </div>
             
         </div>
