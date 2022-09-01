@@ -1,0 +1,18 @@
+ .containe{
+    text-align: center !important;
+ }
+ .contenu{
+    margin: auto;
+ }
+ .contenu h1{
+    width: 400px;
+ }
+ .autenth{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+ }
+ .connecte{
+    margin-top: 50px;
+ }
