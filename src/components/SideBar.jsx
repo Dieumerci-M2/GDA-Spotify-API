@@ -14,8 +14,8 @@ const SideBar = () => {
         <div className="text-center mb-4">
             <img src={logo} alt="voici notre logo" />
         </div>
-        <div className="icone-home text-light fw-semibold">
-                <span className='fs-3'><HiHome /></span><span className='ms-3 text-light'>Home</span>
+        <div className="icone-home text-light">
+            <span className='ic-home fs-1'><HiHome /></span><span className='home ms-3 text-light'>Home</span>
         </div>
         <div className="othermenu ms-3 text-light">
             <div>

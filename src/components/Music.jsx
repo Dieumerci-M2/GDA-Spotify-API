@@ -16,7 +16,8 @@ const Music = ({artiste1, play, stars, download}) => {
           <span>Fill Album Just for.</span>
         </div>
         <div className="player text-center w-105 h-35">
-          <BiDownload /><BsPlayCircleFill /><RiStarSLine />
+          <span className='Download'><BiDownload /></span><span className='play-button'><BsPlayCircleFill /></span>
+          <span className='stars'><RiStarSLine /></span>
         </div>
       </div>
     </article>
