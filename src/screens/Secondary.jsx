@@ -1,6 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Autenthification from '../components/Autenthification'
+//import { userContext } from './MyContext'
+//import Principal from './Principal'
 const Secondary = () => {
   const [token, setToken] = useState("")
   useEffect(()=>{
@@ -20,6 +22,9 @@ const Secondary = () => {
   const answer = 'token'
   return (
     <div>
+        {/* <userContext.Provider value = {token}> */}
+           {/* <Principal token={token}/> */}
+        {/* </userContext.Provider> */}
         <Autenthification ClientId = {ClientId} redirection = {redirection} outendpoint = {outendpoint} answer = {answer}
             token = {token} scope = {scope}/>
     </div>
