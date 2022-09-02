@@ -14,13 +14,14 @@ const Secondary = () => {
     setToken(token)
   },[])
   const ClientId = '03880715cb5c42db88b289ec843534bc'
-  const redirection = 'http://localhost:5173/'
+  const redirection = 'http://localhost:5173/home'
   const outendpoint = 'https://accounts.spotify.com/authorize'
+  const scope = 'user-read-email playlist-read-private'
   const answer = 'token'
   return (
     <div>
         <Autenthification ClientId = {ClientId} redirection = {redirection} outendpoint = {outendpoint} answer = {answer}
-            token = {token}/>
+            token = {token} scope = {scope}/>
     </div>
   )
 }
