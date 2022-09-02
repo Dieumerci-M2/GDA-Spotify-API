@@ -9,7 +9,7 @@ const Music = ({artiste1, play, stars, download}) => {
     <article className='music ms-4'>
       <div className="contenu text-dark">
         <div className="photo-artiste">
-          <img src={artiste1} alt="tof" cover />
+          <img src={artiste1} alt="tof" />
         </div>
         <div className="title-Music text-center w-138 h-45">
           <span>Kirk Franklin</span>

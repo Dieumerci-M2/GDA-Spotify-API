@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/autenthification.css'
 import Button from 'react-bootstrap/Button'
 
-const Autenthification = ({ClientId, redirection, outendpoint, answer, token}) => {
+const Autenthification = ({ClientId, redirection, outendpoint, answer, token, scope}) => {
   return (
     <section className='containe text-center'>
         <div className="contenu">
@@ -17,7 +17,7 @@ const Autenthification = ({ClientId, redirection, outendpoint, answer, token}) =
           </div>
           <div className='connecte'> 
           { !token?
-              <Button variant="primary" className='w-100'> <a href={`${outendpoint}?client_id=${ClientId}&redirect_uri=${redirection}&response_type=${answer}`}>Se connecter</a> </Button>
+              <Button variant="primary" className='w-100'> <a href={`${outendpoint}?client_id=${ClientId}&redirect_uri=${redirection}&response_type=${answer}&scope=${scope}`}>Se connecter</a> </Button>
               : <Button>Se Déconnecter</Button>
             }
           </div>
