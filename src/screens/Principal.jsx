@@ -5,46 +5,50 @@ import Main from "../components/Main";
 import "../styles/principal.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+
+const ClientId = "03880715cb5c42db88b289ec843534bc";
+const ClientSecret = 'edc948911cf346b8b32578f0454ee678'
 const Principal = () => {
   const [searchKey, setSearchKey] = useState("");
   const [artists, setArtists] = useState([]);
-
- 
-    // (async function () {
-    //   const { data } = await axios.get(
-    //     "https://api.spotify.com/v1/search?q=remaster%2520track%3ADoxy%2520artist%3AMiles%2520Davis&type=track%2Cartist&market=ES&limit=10&offset=5",
-    //     {
-    //       headers: {
-    //         Authorization: `Bearer ${token}`,
-    //         "Content-Type": "application/json",
-    //       },
-    //     }
-    //   );
-    // })();
     const [token, setToken] = useState("");
-    useEffect(() => {
-      const hash = window.location.hash
-      let token = window.localStorage.getItem("token")
-      if (!token && hash) {
-        token = hash
-          .substring(1)
-          .split("&")
-          .find((elem) => elem.startsWith("access_token"))
-          .split("=")[1]
-        console.log(token)
-        window.location.hash = ""
-        window.localStorage.setItem("token", token)
-      }
-      setToken(token);
-    }, []);
- 
 
-  //setArtists(data.artists.items)
+    useEffect(() => {
+      let authParameter = {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: `grant_type=client_credentials&client_id=${ClientId}&client_secret=${ClientSecret}`
+      }
+      fetch('https://accounts.spotify.com/api/token', authParameter)
+      .then(result => result.json()).then(data => setToken(data.access_token))
+
+    }, []);
+    
+    const lookat =(e)=>{
+        setSearchKey(e.target.value)
+    }
+    const searchArtist = async(e)=>{
+      e.preventDefault()
+      const{data} = await axios.get('https://api.spotify.com/v1/search', {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization : `Bearer ${token}`
+        },
+        params : {
+          q : searchKey,
+          type : 'artist'
+        } 
+      })
+      console.log(data)
+    }
+
   return (
     <div className="containe">
       <SideBar />
       <div className="middle">
-        <NavBar />
+        <NavBar token ={token} setToken = {setToken} lookat = {lookat} searchArtist = {searchArtist} />
         <Main />
       </div>
     </div>
