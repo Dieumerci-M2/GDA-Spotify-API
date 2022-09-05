@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 
 const Autenthification = () => {
   const ClientId = "03880715cb5c42db88b289ec843534bc";
+  const ClientSecret = 'edc948911cf346b8b32578f0454ee678'
   const redirection = "http://localhost:5173/home";
   const outendpoint = "https://accounts.spotify.com/authorize";
-  //const scope = 'user-read-email playlist-read-private'
+  const scope = 'user-read-email playlist-read-private'
   const answer = "token";
 
   return (
@@ -24,7 +25,7 @@ const Autenthification = () => {
         </div>
         <div className="connecte">
               <a
-                href={`${outendpoint}?client_id=${ClientId}&redirect_uri=${redirection}&response_type=${answer}`}
+                href={`${outendpoint}?client_id=${ClientId}&redirect_uri=${redirection}&response_type=${answer}&scope=${scope}`}
               >
                 Se connecter
               </a>
@@ -35,6 +36,5 @@ const Autenthification = () => {
     </section>
   );
 };
-// &scope=${scope}
 
 export default Autenthification;
