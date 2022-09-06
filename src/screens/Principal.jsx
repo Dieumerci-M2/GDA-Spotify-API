@@ -63,10 +63,8 @@ const Principal = () => {
       let returnArtistAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistId + '/albums?includes_groups=album&market=US&limit=50', artistParameters)
       .then(response=> response.json())
       .then(data=> {
-        console.log(data)
         setAlbum(data.items)
       })
-      console.log(album)
       // Display those album from user
 
       //console.log(artistID)
