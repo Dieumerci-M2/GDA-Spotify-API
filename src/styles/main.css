@@ -3,3 +3,9 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.main {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
