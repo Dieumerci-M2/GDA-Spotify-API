@@ -11,7 +11,9 @@ const ClientSecret = 'edc948911cf346b8b32578f0454ee678'
 const Principal = () => {
   const [searchKey, setSearchKey] = useState("");
   const [artists, setArtists] = useState([]);
-    const [token, setToken] = useState("");
+  const [token, setToken] = useState("");
+  const [album, setAlbum] = useState([]);
+
 
     useEffect(() => {
       let authParameter = {
@@ -48,7 +50,6 @@ const Principal = () => {
         } 
       })
       const artistId = response.data.artists.items[0].id
-      console.log(artistId)
       // Get request with Artist ID grab all album from that artist 
 
       const artistParameters ={
@@ -59,9 +60,13 @@ const Principal = () => {
         }
       }
 
-      let artistAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistId + '/albums?includes_groups=album&market=US&limit=50', artistParameters)
+      let returnArtistAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistId + '/albums?includes_groups=album&market=US&limit=50', artistParameters)
       .then(response=> response.json())
-      .then(response=> console.log(response))
+      .then(data=> {
+        console.log(data)
+        setAlbum(data.items)
+      })
+      console.log(album)
       // Display those album from user
 
       //console.log(artistID)
@@ -72,7 +77,7 @@ const Principal = () => {
       <SideBar />
       <div className="middle">
         <NavBar token ={token} setToken = {setToken} lookat = {lookat} searchArtist = {searchArtist} />
-        <Main />
+        <Main albums = {album}/>
       </div>
     </div>
   );
