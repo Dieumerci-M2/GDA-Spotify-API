@@ -29,9 +29,15 @@ const Principal = () => {
     const lookat =(e)=>{
         setSearchKey(e.target.value)
     }
+
+    // Search Function
+
     const searchArtist = async(e)=>{
       e.preventDefault()
-      const{data} = await axios.get('https://api.spotify.com/v1/search', {
+
+      // Get request using search to get Artist ID
+
+      const response = await axios.get('https://api.spotify.com/v1/search?', {
         headers: {
           'Content-Type': 'application/json',
           Authorization : `Bearer ${token}`
@@ -41,7 +47,24 @@ const Principal = () => {
           type : 'artist'
         } 
       })
-      console.log(data)
+      const artistId = response.data.artists.items[0].id
+      console.log(artistId)
+      // Get request with Artist ID grab all album from that artist 
+
+      const artistParameters ={
+        method : 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization : `Bearer ${token}`
+        }
+      }
+
+      let artistAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistId + '/albums?includes_groups=album&market=US&limit=50', artistParameters)
+      .then(response=> response.json())
+      .then(response=> console.log(response))
+      // Display those album from user
+
+      //console.log(artistID)
     }
 
   return (
