@@ -1,14 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .music{
     border-radius: 10px;
     background-color: #121212;
     max-width: 150px !important;
     max-height: 250px !important;
+    margin: 20px auto;
 }
 img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    width: 150px !important;
-    height: 150px !important;
+    min-width: 150px !important;
+    min-height: 150px !important;
+
 
 }
 .contenu{
@@ -25,15 +31,21 @@ img {
     justify-content: center;
     gap: 20px;
     font-size: 20px;
-    margin-top: 20px;
 }
 .title-Music{
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    max-height: 50px;
+    min-height: 50px;
 }
 .play-button{
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
+}
+.title{
+    max-height: 50px;
+    min-height: 50px;
+    overflow: hidden;
 }
