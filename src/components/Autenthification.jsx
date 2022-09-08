@@ -12,25 +12,25 @@ const Autenthification = () => {
   const answer = "token";
 
   return (
-    <section className="containe text-center">
-      <div className="contenu">
+    <section className="contain">
+      <div className="contenus">
         <h1>Bienvenu chez GDA Music</h1>
         <div className="autenth">
           <div>
             <input type="mail" placeholder="E-mail" />
           </div>
           <div>
-            <input type="password" placeholder="pass" />
+            <input type="password" placeholder="password" />
           </div>
         </div>
         <div className="connecte">
+          <button>
               <a
                 href={`${outendpoint}?client_id=${ClientId}&redirect_uri=${redirection}&response_type=${answer}&scope=${scope}`}
               >
                 Se connecter
               </a>
-            
-        
+          </button>
         </div>
       </div>
     </section>

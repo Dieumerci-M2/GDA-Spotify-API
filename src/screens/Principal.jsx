@@ -60,7 +60,7 @@ const Principal = () => {
         }
       }
 
-      let returnArtistAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistId + '/albums?includes_groups=album&market=US&limit=50', artistParameters)
+      let returnArtistAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistId + '/albums?includes_groups=album&market=US&limit=49', artistParameters)
       .then(response=> response.json())
       .then(data=> {
         setAlbum(data.items)
@@ -74,8 +74,12 @@ const Principal = () => {
     <div className="containe">
       <SideBar />
       <div className="middle">
+        <div className="nav-up">
         <NavBar token ={token} setToken = {setToken} lookat = {lookat} searchArtist = {searchArtist} />
-        <Main albums = {album}/>
+        </div>
+        <div className="cover-main">
+          <Main albums = {album}/>
+        </div>
       </div>
     </div>
   );

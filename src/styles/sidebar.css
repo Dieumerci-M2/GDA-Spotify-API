@@ -1,7 +1,8 @@
 .side-containe{
-     max-width: 250px !important; 
-     min-width: 250px !important; 
     background-color: #00000E;
+    max-height: 100vh;
+    min-height: 100vh;
+    color: white;
 }
 
 
@@ -12,7 +13,7 @@ img{
 .othermenu{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start !important;
     gap: 25px !important;
 }
 .mentionLeg{
@@ -28,7 +29,5 @@ img{
 .home{
     font-size: 1.2rem;
 }
-.ic-home{
-    font-weight: 2rem !important;
-}
+
 

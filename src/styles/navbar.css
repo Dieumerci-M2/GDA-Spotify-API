@@ -1,9 +1,8 @@
 .nav{
-    width: max-content;
+    width: 80vw;
     background-color: #121212;
     display: flex;
     flex-direction: row;
-    gap: 10rem;
 }
 .profil{
     width: 30px !important;
@@ -14,10 +13,11 @@
 .enter{
     min-width: 400px !important;
     margin-left: 100px;
-    margin-right: 200px;
+    margin-right: auto;
 }
 .autenthification{
-    margin-left: 245px;
+    margin-left: auto;
+    margin-right: 20px;
 }
 .picture{
     display: flex !important;
