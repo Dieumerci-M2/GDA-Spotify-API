@@ -7,29 +7,29 @@ import {RiMusic2Fill} from 'react-icons/ri'
 import {IoIosMicrophone} from 'react-icons/io'
 const SideBar = () => {
   return (
-    <section className='side-containe h-100'>
-        <div className="mt-3 mb-2 text-center">
-            <span className='fs-2 text-light fw-bold'>GDA Music</span>
+    <section className='side-containe'>
+        <div>
+            <span className='title-Gda'>GDA Music</span>
         </div>
-        <div className="text-center mb-4">
+        <div className="logo">
             <img src={logo} alt="voici notre logo" />
         </div>
-        <div className="icone-home text-light">
-            <span className='ic-home fs-1'><HiHome /></span><span className='home ms-3 text-light'>Home</span>
+        <div className="icone-home">
+            <span className='ic-home'><HiHome /></span><span className='home ms-3 text-light'>Home</span>
         </div>
-        <div className="othermenu ms-3 text-light">
+        <div className="othermenu">
             <div>
-            <span className='fs-3'><BsFillPlusCircleFill /></span><span id='playlist' className="ms-4 pe-auto">Créer une Playlist</span>
+            <span className='icone play'><BsFillPlusCircleFill /></span><span id='playlist'>Créer une Playlist</span>
             </div>
             <div>
-                <span className='fs-3'><RiMusic2Fill /></span><span id='preference'className='ms-4'>Musique Favorite</span>
+                <span className='icone preference'><RiMusic2Fill /></span><span id='preference'>Musique Favorite</span>
             </div>
             <div>
-                <span className='fs-3'><IoIosMicrophone /></span><span id='InfoArtiste' className='ms-4'>Info Artiste</span>
+                <span className='icone info'><IoIosMicrophone /></span><span id='InfoArtiste'>Info Artiste</span>
             </div>
             
         </div>
-        <div className="mentionLeg mt-40 text-center text-light">
+        <div className="mentionLeg">
             <span>Mentions Légales</span>
         </div>
     </section>

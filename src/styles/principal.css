@@ -4,10 +4,15 @@
     width: 100vw;
     display: grid;
     grid-template-columns: 20vw 80vw;
-}
 
-.middle {
-    height: 100vh;
+}
+.middle{
     display: grid;
-    grid-template-rows: 20vh 80vh;
+    grid-template-rows: 5vw 95vw;  
+}
+.nav-up{
+    width: 100vh !important;
+}
+.cover-main{
+    width: 100vh;
 }

@@ -11,10 +11,10 @@ const Music = ({image, name, play, stars, download, showiframe, id}) => {
         <div className="photo-artiste">
           <img src={image} alt="tof" />
         </div>
-        <div className="title-Music text-center w-138 h-45">
+        <div className="title-Music">
           <span className='title'> {name} </span>
         </div>
-        <div className="player text-center w-105 h-35">
+        <div className="player">
           <span className='Download'><BiDownload /></span>
           <span className='play-button' onClick={() => showiframe(id, 'album')}><BsPlayCircleFill /></span>
           <span className='stars'><RiStarSLine /></span>

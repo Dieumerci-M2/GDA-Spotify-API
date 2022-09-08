@@ -1,7 +1,5 @@
 import React from 'react'
 import {BsSearch} from 'react-icons/bs'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Button from 'react-bootstrap/Button'
 import '../styles/navbar.css'
 import { useState } from 'react'
 import Autenthification from './Autenthification'
@@ -11,19 +9,19 @@ const NavBar = ({token, setToken, lookat, searchArtist}) => {
       window.localStorage.removeItem(token)
     }
   return (
-    <section className='nav '>
+    <div className='nav '>
         <form className='search ms-4' onSubmit={searchArtist}>
             <input placeholder='search for Artists' type="input" className='enter me-2' 
-            onChange={lookat} /><Button type='submit'onClick={()=>searchArtist}>Search</Button>
+            onChange={lookat} /><button type='submit'onClick={()=>searchArtist}>Search</button>
         </form>
         <div className="autenthification me-4 mt-3">
           <div className='picture'>
-            <span className='profil me-4'>photo</span>
-            <Button onClick={ ()=> logout}>Se Déconncter</Button> 
+            <span className='profil'>photo</span>
+            <button onClick={ ()=> logout}>Se Déconncter</button> 
           </div> 
-          <h5 className='mt-2 text-light'>Dieu-merci</h5>
+          <h5 className='name-profil'>Dieu-merci</h5>
         </div>        
-    </section>   
+    </div>   
   )
 }
 

@@ -36,7 +36,6 @@ img {
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     max-height: 50px;
     min-height: 50px;
 }
