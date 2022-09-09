@@ -1,15 +1,16 @@
 .root{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body,
 html {
   font-family: Montserrat, Helvetica, sans-serif;
-  background-color: black;
 }
 
 .App, .root {
   height: 100vh;
   width : 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }

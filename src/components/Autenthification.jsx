@@ -15,6 +15,7 @@ const Autenthification = () => {
     <section className="contain">
       <div className="contenus">
         <h1>Bienvenu chez GDA Music</h1>
+        <h3>Authentifications</h3>
         <div className="autenth">
           <div>
             <input type="mail" placeholder="E-mail" />
@@ -31,6 +32,7 @@ const Autenthification = () => {
                 Se connecter
               </a>
           </button>
+          <button>Connecte with google</button>
         </div>
       </div>
     </section>
