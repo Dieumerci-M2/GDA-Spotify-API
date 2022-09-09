@@ -1,6 +1,7 @@
 import Principal from './screens/Principal'
 import {BrowserRouter as Router} from 'react-router-dom'
 import Road from './routes/Routes'
+import './styles/app.css'
 
 function App() {
 
