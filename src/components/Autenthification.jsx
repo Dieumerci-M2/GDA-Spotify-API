@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/autenthification.css";
 import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
+import {FcGoogle} from 'react-icons/fc'
+import logostream from '../assets/attachment_113743867.png'
 
 const Autenthification = () => {
   const ClientId = "03880715cb5c42db88b289ec843534bc";
@@ -14,8 +16,15 @@ const Autenthification = () => {
   return (
     <section className="contain">
       <div className="contenus">
-        <h1>Bienvenu chez GDA Music</h1>
-        <h3>Authentifications</h3>
+        <div className="title-principal">
+          <h1>Bienvenu chez GDA Music</h1>
+        </div>
+        <div className="logo-Streaming">
+            <span> {logostream} </span>
+        </div>
+        <div className="aunthent">
+          <h3>Authentifications</h3>
+        </div>
         <div className="autenth">
           <div>
             <input type="mail" placeholder="E-mail" />
@@ -32,7 +41,12 @@ const Autenthification = () => {
                 Se connecter
               </a>
           </button>
-          <button>Connecte with google</button>
+          <div className="google-connecte">
+          <button>
+            <span className="icon-google"><FcGoogle /></span>
+            Se connecter avec google
+          </button>
+          </div>
         </div>
       </div>
     </section>
