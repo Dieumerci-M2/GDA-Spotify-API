@@ -4,7 +4,7 @@
    align-items: center;
    background-color: white;
    margin: auto;
-   margin-left: 55rem;
+   margin-left: 32.5rem;
    max-width: 500px;
    min-width: 500px;
    max-height: 600px;
@@ -23,6 +23,12 @@
     gap: 30px;
     margin-top: 30px;
  }
+ .logo-Streaming{
+  text-align: center;
+ }
+ .aunthent{
+  text-align: center;
+ }
  .connecte{
    display: flex;
    flex-direction: column;
@@ -37,7 +43,11 @@
    height: 40px;
    border-radius: 10px;
    padding-left: 20px;
-   border: 1px solid rgba(0, 0, 0, 0.327)
+   border: 1px solid rgba(0, 0, 0, 0.327);
+   font-size: 20px;
+ }
+ input:hover{
+  border: 1px solid rgb(8, 129, 223);
  }
 .connecte{
    text-align: center;
@@ -47,8 +57,15 @@ button{
    border: 1px solid rgba(0, 0, 0, 0.327);
    font-size: 20px;
    cursor: pointer;
+   color: rgb(42, 133, 219);
 }
 .connecte button:nth-child(1) a{
    text-decoration: none;
-   color: black;
+}
+.icon-google{
+  margin: auto 20px;
+}
+.google-connecte button{
+  width: 420px;
+  color: rgb(42, 133, 219);
 }
