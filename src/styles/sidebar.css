@@ -1,33 +1,60 @@
 .side-containe{
     background-color: #00000E;
-    max-height: 100vh;
-    min-height: 100vh;
+    max-height: 100vw;
+    min-height: 100vw;
     color: white;
-}
-
-
-img{
+    }
+    
+    .title-principal{
+    text-align: center;
+    margin-top: 30px;
+    }
+    .title-Gda{
+    font-size: 30px;
+    }
+    .logo{
+    text-align: center;
+    margin-top: 20px;
+    }
+    .logo-treaming{
     max-width: 100px;
     max-height: 100px;
-}
-.othermenu{
+    }
+    .othermenu{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start !important;
-    gap: 25px !important;
-}
-.mentionLeg{
+    justify-content: flex-start;
+    gap: 25px;
+    margin-left: 30px;
+    font-size: 20px;
+    }
+    .icone{
+    margin-left: 20px;
+    }
+    .mentionLeg{
     cursor: pointer;
-    margin-top: 12rem !important;   
-}
-.icone-home{
-    margin-top: 30px !important;
-    margin-bottom: 40px !important;
-    margin-left: 40px !important;
-    
-}
-.home{
+    margin-top: 12rem;
+    text-align: center; 
+    }
+    .icone-home{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    }
+    .home{
+    margin-left: 10px;
     font-size: 1.2rem;
-}
-
-
+    text-decoration: none !important;
+    color: white;
+    }
+    .ic-home{
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    }
+    
+    .redurection{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 30px; 
+    }
