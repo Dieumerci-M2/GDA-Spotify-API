@@ -2,25 +2,58 @@
     width: 80vw;
     background-color: #121212;
     display: flex;
-    flex-direction: row;
-}
-.profil{
-    width: 30px !important;
-    height: 30px !important;
-    background-color: black !important;
-    border-radius: 50% !important;
-}
-.enter{
-    min-width: 400px !important;
-    margin-left: 100px;
-    margin-right: auto;
-}
-.autenthification{
+    }
+    .search{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 3rem;
+    }
+    .search input{
+    font-size: 20px;
+    font-weight: 20px;
+    }
+    .search input:hover{
+    border: 2px solid rgb(0, 94, 255);
+    box-shadow: -2px -2px -1px rgb(0, 94, 255);
+    }
+    
+    .bsearch{
+    margin-left: 10px;
+    }
+    .bsearch button{
+    padding: 5px;
+    color: white;
+    background-color: rgb(0, 140, 255);
+    border-radius: 10px;
+    }
+    .bsearch button:hover{
+    background-color: rgba(13, 133, 231, 0.492);
+    }
+    .profil{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50px;
+    }
+    .autenthification{
+    margin-top: 20px;
     margin-left: auto;
     margin-right: 20px;
-}
-.picture{
-    display: flex !important;
-    gap: 100px !important;
-}
-
+    }
+    .logout button{
+    color: white;
+    background-color: rgb(0, 140, 255);
+    border-radius: 10px;
+    padding: 0px 10px; 
+    }
+    .logout button:hover{
+    background-color: rgba(13, 133, 231, 0.492); 
+    }
+    .picture{
+    display: flex;
+    gap: 100px;
+    }
+    .name-profil{
+    color : white;
+    }
+    

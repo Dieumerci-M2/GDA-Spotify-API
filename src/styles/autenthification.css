@@ -1,4 +1,4 @@
- /* .contain{
+ .contain{
    display: flex;
    justify-content: center;
    align-items: center;
@@ -51,4 +51,4 @@ button{
 .connecte button:nth-child(1) a{
    text-decoration: none;
    color: black;
-} */
+}
