@@ -11,12 +11,10 @@
     .search input{
     font-size: 20px;
     font-weight: 20px;
-    }
-    .search input:hover{
     border: 2px solid rgb(0, 94, 255);
     box-shadow: -2px -2px -1px rgb(0, 94, 255);
     }
-    
+
     .bsearch{
     margin-left: 10px;
     }
@@ -25,6 +23,10 @@
     color: white;
     background-color: rgb(0, 140, 255);
     border-radius: 10px;
+    width: 75px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
     }
     .bsearch button:hover{
     background-color: rgba(13, 133, 231, 0.492);
@@ -45,6 +47,9 @@
     background-color: rgb(0, 140, 255);
     border-radius: 10px;
     padding: 0px 10px; 
+    cursor: pointer;
+    width: 8rem;
+    height: 40px;
     }
     .logout button:hover{
     background-color: rgba(13, 133, 231, 0.492); 

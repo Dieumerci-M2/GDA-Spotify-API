@@ -12,7 +12,7 @@ import jwt_decode from 'jwt-decode'
 
 const ClientId = "03880715cb5c42db88b289ec843534bc";
 const ClientSecret = 'edc948911cf346b8b32578f0454ee678'
-const Principal = () => {
+const Principal = ({dropComponent}) => {
   const[user, setUser] = useState({})
   const [searchKey, setSearchKey] = useState("");
   const [artists, setArtists] = useState([]);
@@ -78,18 +78,18 @@ const Principal = () => {
 
   return (
     <section>
-      (user &&   <div className="containe">
-      <SideBar />
-      <div className="middle">
-        <div className="nav-up">
-        <NavBar token ={token} setToken = {setToken} lookat = {lookat} searchArtist = {searchArtist}
-        src = {user.picture} />
+      <div className="containe">
+        <SideBar />
+        <div className="middle">
+          <div className="nav-up">
+          <NavBar token ={token} setToken = {setToken} lookat = {lookat} searchArtist = {searchArtist}
+          src = {user.picture} dropComponent = {dropComponent}/>
+          </div>
+          <div className="cover-main">
+            <Main albums = {album}/>
+          </div>
         </div>
-        <div className="cover-main">
-          <Main albums = {album}/>
-        </div>
-      </div>
-    </div> )
+    </div> 
     </section>
   );
 };
