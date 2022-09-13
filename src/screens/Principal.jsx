@@ -2,18 +2,24 @@ import React from "react";
 import SideBar from "../components/SideBar";
 import NavBar from "../components/NavBar";
 import Main from "../components/Main";
+import Autenthification from "../components/Autenthification";
 import "../styles/principal.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { GoogleLogin } from 'react-google-login';
+import { gapi } from 'gapi-script';
+import jwt_decode from 'jwt-decode'
 
 const ClientId = "03880715cb5c42db88b289ec843534bc";
 const ClientSecret = 'edc948911cf346b8b32578f0454ee678'
 const Principal = () => {
+  const[user, setUser] = useState({})
   const [searchKey, setSearchKey] = useState("");
   const [artists, setArtists] = useState([]);
   const [token, setToken] = useState("");
   const [album, setAlbum] = useState([]);
 
+// Take Token
 
     useEffect(() => {
       let authParameter = {
@@ -50,6 +56,7 @@ const Principal = () => {
         } 
       })
       const artistId = response.data.artists.items[0].id
+
       // Get request with Artist ID grab all album from that artist 
 
       const artistParameters ={
@@ -67,21 +74,23 @@ const Principal = () => {
       })
       // Display those album from user
 
-      //console.log(artistID)
     }
 
   return (
-    <div className="containe">
+    <section>
+      (user &&   <div className="containe">
       <SideBar />
       <div className="middle">
         <div className="nav-up">
-        <NavBar token ={token} setToken = {setToken} lookat = {lookat} searchArtist = {searchArtist} />
+        <NavBar token ={token} setToken = {setToken} lookat = {lookat} searchArtist = {searchArtist}
+        src = {user.picture} />
         </div>
         <div className="cover-main">
           <Main albums = {album}/>
         </div>
       </div>
-    </div>
+    </div> )
+    </section>
   );
 };
 
