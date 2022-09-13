@@ -4,6 +4,8 @@ import {FcGoogle} from 'react-icons/fc'
 import logostream from '../assets/attachment_113743867.png'
 import jwt_decode from 'jwt-decode'
 import { useState, useEffect } from "react";
+import Principal from "../screens/Principal";
+
 
 const Autenthification = () => {
   
@@ -15,6 +17,7 @@ const Autenthification = () => {
   const answer = "token";
 
   const[user, setUser] = useState({})
+  const[dropComponent, setDropComponent] = useState(true)
 
   // Configuration of Login with Google part 
    
@@ -33,44 +36,30 @@ const Autenthification = () => {
      let userObject = jwt_decode(response.credential)
      console.log(userObject)
      setUser(userObject)
+     document.getElementById('contain').hidden = dropComponent;
+
    }
 
 return (
-    <section className="contain">
+    <section id="contain">
       <div className="contenus">
-        <div className="title-principal">
-          <h1>Bienvenu chez GDA Music</h1>
-        </div>
+        <h1>Bienvenu chez GDA Music</h1>
         <div className="logo-Streaming">
-            <img src={logostream} alt="icone de GDA Music"/>
+          <img src={logostream} alt="icone de GDA Music"/>
         </div>
-        <div className="aunthent">
-          <h3>Authentifications</h3>
+        <h3>Authentifications</h3>
+        <input type="mail" placeholder="E-mail" />
+        <input type="password" placeholder="password" />
+        <button>
+            <a
+              href={`${outendpoint}?client_id=${ClientId}&redirect_uri=${redirection}&response_type=${answer}&scope=${scope}`}
+            >
+              Se connecter
+            </a>
+        </button>
+        <button id="icon-google">
+        </button>
         </div>
-        <div className="autenth">
-          <div>
-            <input type="mail" placeholder="E-mail" />
-          </div>
-          <div>
-            <input type="password" placeholder="password" />
-          </div>
-        </div>
-        <div className="connecte">
-          <button>
-              <a
-                href={`${outendpoint}?client_id=${ClientId}&redirect_uri=${redirection}&response_type=${answer}&scope=${scope}`}
-              >
-                Se connecter
-              </a>
-          </button>
-          <div className="google-connecte">
-          <button>
-            <span id="icon-google"><FcGoogle /></span>
-            Se connecter avec google
-          </button>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
