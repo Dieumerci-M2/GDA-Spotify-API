@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/navbar.css";
+import Autenthification from "./Autenthification";
 import { Link } from "react-router-dom";
 const NavBar = ({ token, setToken, lookat, searchArtist }) => {
   const logout = () => {
@@ -24,7 +25,7 @@ const NavBar = ({ token, setToken, lookat, searchArtist }) => {
         <div className="picture">
           <span className="profil">photo</span>
           <span className="logout">
-            <Link to="../" className='deconnecte' ><button>Se Déconncter</button></Link>
+            <button onClick={()=>{}}>Se Déconncter</button>
           </span>
         </div>
         <h5 className="name-profil">Dieu-merci</h5>

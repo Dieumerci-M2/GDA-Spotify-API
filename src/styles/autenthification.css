@@ -36,7 +36,7 @@
 .connecte{
    text-align: center;
 }
-button{
+.connectSpotify{
    height: 40px;
    border: 1px solid rgba(0, 0, 0, 0.327);
    font-size: 20px;
@@ -44,13 +44,13 @@ button{
    color: rgb(42, 133, 219);
    width: 420px;
 }
-button a{
+.connectSpotify a{
    text-decoration: none;
 }
 .icon-google{
   margin: auto 20px;
 }
-.google-connecte button{
+#icon-google{
   width: 420px;
   color: rgb(42, 133, 219);
 }
