@@ -21,10 +21,14 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
  }
  .logo-Streaming{
   text-align: center;
+ }
+ .logo-Streaming img{
+  width: 100px;
+  height: 100px;
  }
  .aunthent{
   text-align: center;
